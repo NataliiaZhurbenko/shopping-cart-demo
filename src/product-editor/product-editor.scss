@@ -1,0 +1,11 @@
+.product-editor {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  &__textarea {
+    outline: none;
+    border: 1px solid #888;
+    resize: none;
+  }
+}

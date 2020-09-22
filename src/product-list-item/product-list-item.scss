@@ -1,0 +1,22 @@
+.product-list-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5em 0;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #555;
+
+  &__title {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__price {
+    font-size: 0.7em;
+    color: #808080;
+  }
+}
