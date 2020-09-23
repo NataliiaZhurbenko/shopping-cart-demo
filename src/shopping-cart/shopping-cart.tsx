@@ -10,7 +10,6 @@ type ShoppingCartProps = {
 }
 
 export default function ShoppingCart(props:ShoppingCartProps) {
-
     return (
         <div className="shopping-cart">
             {props.products.map(product =>
@@ -24,9 +23,9 @@ export default function ShoppingCart(props:ShoppingCartProps) {
                 />
             )}
 
-            <div>Total : {props.products.reduce( (accum, product) =>
-                accum + product.quantity * product.price, 0)
-            }
+            <div className="shopping-cart__total-amount">
+                Total amount: {props.products.reduce(
+                    (accum, product) => accum + product.quantity * product.price, 0)}
             </div>
         </div>
     );

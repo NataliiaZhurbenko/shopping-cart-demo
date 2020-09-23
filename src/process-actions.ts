@@ -1,10 +1,9 @@
-import { ProductDatum, ShoppingDatum, State } from './types';
+import { State } from './types';
 
 type Action =
     | { type: 'parse', text: string }
     | { type: 'add', id: number }
     | { type: 'delete', id: number};
-
 
 export default function processActions(state: State, action: Action): State {
     switch (action.type) {
@@ -31,8 +30,6 @@ export default function processActions(state: State, action: Action): State {
 
             return state;
 
-
-
         case 'add':
             const selectedProduct = state.productData.filter(product =>
                 product.id === action.id
@@ -51,13 +48,11 @@ export default function processActions(state: State, action: Action): State {
                         shoppingData: [...state.shoppingData]
                     }
                 } else {
-
                     return {
                         ...state,
                         shoppingData: [...state.shoppingData, {...selectedProduct[0], quantity: 1} ]
                     }
                 }
-
             }
 
             return state;
@@ -87,6 +82,9 @@ export default function processActions(state: State, action: Action): State {
                 }
             }
 
+            return state;
+
+        default:
             return state;
     }
 }

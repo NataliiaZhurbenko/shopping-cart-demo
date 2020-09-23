@@ -1,0 +1,26 @@
+.shopping-list-item {
+  border: 1px solid #555;
+  color: #fff;
+
+  &:nth-child(odd) {
+    background: #555;
+    }
+
+  &:nth-child(even) {
+    background: #888;
+  }
+
+  &__title,
+  &__total {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__delete-item-button {
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #555;
+    width: 6em;
+  }
+}

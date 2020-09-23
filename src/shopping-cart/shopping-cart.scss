@@ -1,0 +1,11 @@
+.shopping-cart {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 30em;
+
+  &__total-amount {
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+}

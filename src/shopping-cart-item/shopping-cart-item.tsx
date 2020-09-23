@@ -10,18 +10,17 @@ type ShoppingCartItemProps = {
 }
 
 export default function ShoppingCartItem(props: ShoppingCartItemProps) {
-
-    function handleDeleteProduct (event: React.MouseEvent<HTMLButtonElement>) {
+    function handleDeleteProduct() {
         props.onDeleteProduct(props.id);
     }
 
     return (
         <div className='shopping-list-item'>
-            <span className='shopping-list-item__title'>{props.title}</span>
-            <span className='shopping-list-item__price'>{props.price}</span><br/>
-            <span className='shopping-list-item__quantity'>{props.quantity}</span><br/>
-            <span className='shopping-list-item__total'>{props.price * props.quantity}</span><br/>
-            <button className='shopping-cart__delete-item-button' onClick={handleDeleteProduct}>Delete</button>
+            <p className='shopping-list-item__title'>{props.title}</p>
+            <p className='shopping-list-item__price'>Price: {props.price}</p>
+            <p className='shopping-list-item__quantity'>Quantity: {props.quantity}</p>
+            <p className='shopping-list-item__total'>Total: {props.price * props.quantity}</p>
+            <button className='shopping-list-item__delete-item-button' onClick={handleDeleteProduct}>Delete</button>
         </div>
     );
 }

@@ -9,15 +9,14 @@ type ProductListItemProps = {
 }
 
 export default function ProductListItem(props: ProductListItemProps) {
-
-    function handleAddProduct (event: React.MouseEvent<HTMLButtonElement>) {
+    function handleAddProduct() {
         props.onAddProduct(props.id);
     }
 
     return (
         <button className='product-list-item' onClick={handleAddProduct}>
             <span className='product-list-item__title'>{props.title}</span>
-            <span className='product-list-item__value'>{props.price}</span>
+            <span className='product-list-item__price'>Price: {props.price}</span>
         </button>
     );
 }

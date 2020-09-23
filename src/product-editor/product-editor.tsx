@@ -2,7 +2,7 @@ import React from 'react';
 import './product-editor.scss'
 
 type ProductEditorProps = {
-    onParse: (text: string) => void
+    onParse: (text: string) => void;
 }
 
 export default function ProductEditor(props: ProductEditorProps) {

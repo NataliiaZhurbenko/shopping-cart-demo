@@ -1,13 +1,14 @@
 export type ProductDatum = {
-    id: number,
-    title: string,
-    price: number
-};
+    id: number;
+    title: string;
+    price: number;
+}
 
 export type ShoppingDatum = ProductDatum & {
-    quantity: number
-};
+    quantity: number;
+}
 
-
-export type State =
-    { productData: ProductDatum[], shoppingData: ShoppingDatum[]};
+export type State = {
+    productData: ProductDatum[];
+    shoppingData: ShoppingDatum[];
+}
